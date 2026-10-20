@@ -18,7 +18,7 @@ function poseFor(path: string, mobile: boolean): Pose {
   if (mobile) {
     return path === "/"
       ? { x: 0.2, y: 0.25, s: 0.3, o: 0.45 }
-      : { x: 0.3, y: 0.37, s: 0.13, o: 0.9 };
+      : { x: 0.28, y: -0.04, s: 0.16, o: 0.4 };
   }
   switch (path) {
     case "/":

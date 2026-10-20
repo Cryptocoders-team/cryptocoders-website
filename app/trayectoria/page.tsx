@@ -46,7 +46,7 @@ export default function Trayectoria() {
             <p className="micro text-red">Mission timeline</p>
             <p className="micro text-cloud/50">Escala: semestre</p>
           </div>
-          <div data-reveal="stagger" className="mt-6 grid grid-cols-4 gap-2">
+          <div data-reveal="stagger" className="mt-6 grid grid-cols-2 gap-x-2 gap-y-8 md:grid-cols-4">
             {TIMELINE.map((y, i) => (
               <div key={y.year}>
                 <p className={`micro mb-2 ${i === TIMELINE.length - 1 ? "text-red" : "text-cloud/70"}`}>{y.phase}</p>
