@@ -26,9 +26,6 @@ export default function SiteHeader() {
     });
   }, [current]);
 
-  // Cierra el menú móvil al navegar
-  useEffect(() => setOpen(false), [pathname]);
-
   const direction = (i: number) => (i > current ? ["nav-forward"] : ["nav-back"]);
 
   return (
@@ -98,6 +95,7 @@ export default function SiteHeader() {
                   href={n.href}
                   transitionTypes={direction(i)}
                   className="flex items-baseline justify-between py-4"
+                  onClick={() => setOpen(false)}
                   aria-current={i === current ? "page" : undefined}
                 >
                   <span className="display text-3xl">{n.label}</span>

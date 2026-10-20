@@ -83,7 +83,7 @@ export function PageHero({
           {label}
         </span>
         <div className="min-w-0 flex-1">
-          <SplitTitle lines={lines} className="display text-[clamp(52px,11vw,176px)]" />
+          <SplitTitle lines={lines} className="display text-[clamp(48px,8.6vw,150px)]" />
           <div className="mt-4 flex items-center justify-between gap-6 md:w-[64%]">
             <span className="h-[3px] w-24 bg-red" aria-hidden />
             <span className="display text-[clamp(22px,3vw,40px)] text-red">{tail}</span>

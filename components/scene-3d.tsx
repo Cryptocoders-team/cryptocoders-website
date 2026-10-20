@@ -23,14 +23,8 @@ function poseFor(path: string, mobile: boolean): Pose {
   switch (path) {
     case "/":
       return { x: 0.29, y: -0.04, s: 0.52, o: 1 };
-    case "/trayectoria":
-      return { x: 0.36, y: 0.24, s: 0.3, o: 1 };
-    case "/equipo":
-      return { x: 0.37, y: -0.2, s: 0.34, o: 1 };
-    case "/proyectos":
-      return { x: 0.35, y: 0.22, s: 0.32, o: 1 };
     default:
-      return { x: 0.36, y: -0.2, s: 0.36, o: 1 };
+      return { x: 0.34, y: -0.14, s: 0.3, o: 1 };
   }
 }
 
@@ -82,7 +76,7 @@ function buildMark() {
   ];
   data.paths.forEach((p, i) => {
     const spec = specs[i];
-    const geo = new THREE.ExtrudeGeometry(p.toShapes(true), {
+    const geo = new THREE.ExtrudeGeometry(p.toShapes(), {
       depth: spec.depth,
       bevelEnabled: true,
       bevelThickness: 10,
